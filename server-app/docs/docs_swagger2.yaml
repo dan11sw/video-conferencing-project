@@ -1,0 +1,300 @@
+---
+  info: 
+    description: "Данный сервис определяет основные функции"
+    title: "Основной сервис VCS"
+    version: "1.0.0"
+    contact: 
+      email: "swdaniel@yandex.ru"
+  host: "localhost:5000"
+  basePath: "/"
+  produces: 
+    - "application/json"
+    - "application/xml"
+  schemes: 
+    - "http"
+    - "https"
+  securityDefinitions: 
+    JWT: 
+      type: "apiKey"
+      in: "header"
+      name: "Authorization"
+      description: ""
+  externalDocs: 
+    description: "Ссылка на внешнюю документацию"
+    url: "http://localhost:5000/api-docs"
+  swagger: "2.0"
+  paths: 
+    /auth/sign-up: 
+      post: 
+        parameters: 
+          - 
+            name: "input"
+            in: "body"
+            description: "Входные данные"
+            required: true
+            schema: 
+              $ref: "#/definitions/SignUpDto"
+        description: "Регистрация пользователя"
+        tags: 
+          - "Авторизация (пользователь)"
+        responses: 
+          201: 
+            description: "Авторизационные данные пользователя"
+            schema: 
+              $ref: "#/definitions/AuthDto"
+          default: 
+            description: "Ошибка запроса"
+            schema: 
+              $ref: "#/definitions/ApiError"
+    /auth/sign-in: 
+      post: 
+        parameters: 
+          - 
+            name: "input"
+            in: "body"
+            description: "Входные данные"
+            required: true
+            schema: 
+              $ref: "#/definitions/SignInDto"
+        description: "Авторизация пользователя"
+        tags: 
+          - "Авторизация (пользователь)"
+        responses: 
+          200: 
+            description: "Авторизационные данные пользователя"
+            schema: 
+              $ref: "#/definitions/AuthDto"
+          default: 
+            description: "Ошибка запроса"
+            schema: 
+              $ref: "#/definitions/ApiError"
+    /auth/logout: 
+      post: 
+        parameters: 
+          - 
+            name: "input"
+            in: "body"
+            description: "Входные данные"
+            required: true
+            schema: 
+              $ref: "#/definitions/LogoutDto"
+        description: "Выход пользователя из системы"
+        tags: 
+          - "Авторизация (пользователь)"
+        responses: 
+          200: 
+            description: "Флаг, определяющий успех операции выхода пользователя из системы"
+            schema: 
+              $ref: "#/definitions/SuccessDto"
+          default: 
+            description: "Ошибка запроса"
+            schema: 
+              $ref: "#/definitions/ApiError"
+    /auth/refresh/token: 
+      post: 
+        parameters: 
+          - 
+            name: "input"
+            in: "body"
+            description: "Входные данные"
+            required: true
+            schema: 
+              $ref: "#/definitions/RefreshDto"
+        description: "Обновление токена доступа"
+        tags: 
+          - "Авторизация (пользователь)"
+        responses: 
+          201: 
+            description: "Авторизационные данные пользователя"
+            schema: 
+              $ref: "#/definitions/AuthDto"
+          default: 
+            description: "Ошибка запроса"
+            schema: 
+              $ref: "#/definitions/ApiError"
+    /auth/verification: 
+      post: 
+        parameters: []
+        description: "Верификация пользователя"
+        tags: 
+          - "Авторизация (пользователь)"
+        responses: 
+          200: 
+            description: "Флаг, показывающий статус пользователя"
+            schema: 
+              $ref: "#/definitions/FlagDto"
+          default: 
+            description: "Ошибка запроса"
+            schema: 
+              $ref: "#/definitions/ApiError"
+  definitions: 
+    UserDataDto: 
+      properties: 
+        nickname: 
+          type: "string"
+          description: "Никнейм пользователя"
+        tokens: 
+          type: "number"
+          description: "Количество токенов"
+        created_at: 
+          type: "Date"
+          description: "Точное время создание записи в БД"
+        updated_at: 
+          type: "Date"
+          description: "Точное время изменения записи в БД"
+    UserDto: 
+      properties: 
+        access_token: 
+          type: "string"
+          description: "Токен доступа"
+    UserIdDto: 
+      properties: 
+        users_id: 
+          type: "number"
+          description: ""
+    UserInfoDto: 
+      properties: 
+        access_token: 
+          type: "string"
+          description: "Токен доступа"
+    UserTransferDto: 
+      properties: 
+        sender_id: 
+          type: "number"
+          description: "Идентификатор отправителя"
+        receiver_id: 
+          type: "number"
+          description: "Идентификатор получателя"
+        tokens: 
+          type: "number"
+          description: "Количество токенов"
+    AuthDto: 
+      properties: 
+        access_token: 
+          type: "string"
+          description: "Токен доступа"
+    LogoutDto: 
+      required: 
+        - "access_token"
+        - "refresh_token"
+      properties: 
+        access_token: 
+          type: "string"
+          description: ""
+        refresh_token: 
+          type: "string"
+          description: ""
+    ModuleDto: 
+      properties: 
+        user: 
+          type: "boolean"
+          description: ""
+        blogger: 
+          type: "boolean"
+          description: ""
+        admin: 
+          type: "boolean"
+          description: ""
+    RefreshDto: 
+      required: 
+        - "refresh_token"
+      properties: 
+        refresh_token: 
+          type: "string"
+          description: ""
+    RoleDto: 
+      required: 
+        - "id"
+        - "title"
+        - "priority"
+      properties: 
+        id: 
+          type: "number"
+          description: ""
+        title: 
+          type: "string"
+          description: ""
+        priority: 
+          type: "string"
+          description: ""
+    SignInDto: 
+      required: 
+        - "email"
+        - "password"
+      properties: 
+        email: 
+          type: "string"
+          description: ""
+        password: 
+          type: "string"
+          description: ""
+    SignUpDto: 
+      required: 
+        - "email"
+        - "password"
+        - "nickname"
+      properties: 
+        email: 
+          type: "string"
+          description: ""
+        password: 
+          type: "string"
+          description: ""
+        nickname: 
+          type: "string"
+          description: ""
+    TokenDto: 
+      properties: 
+        access_token: 
+          type: "string"
+          description: ""
+        refresh_token: 
+          type: "string"
+          description: ""
+    BloggerIdDto: 
+      properties: 
+        blogger_id: 
+          type: "string"
+          description: "Идентификатор блогера"
+    FlagDto: 
+      properties: 
+        flag: 
+          type: "boolean"
+          description: ""
+    SuccessDto: 
+      properties: 
+        success: 
+          type: "boolean"
+          description: ""
+    ApiError: 
+      properties: 
+        message: 
+          type: "string"
+          description: ""
+        errors: 
+          type: "array"
+          items: 
+            $ref: "#/definitions/FieldError"
+    FieldError: 
+      properties: 
+        type: 
+          type: "string"
+          description: ""
+        value: 
+          type: "string"
+          description: ""
+        msg: 
+          type: "string"
+          description: ""
+        path: 
+          type: "string"
+          description: ""
+        location: 
+          type: "string"
+          description: ""
+  responses: {}
+  parameters: {}
+  tags: 
+    - 
+      name: "Авторизация (пользователь)"
+      description: "Функции для авторизации пользователя"

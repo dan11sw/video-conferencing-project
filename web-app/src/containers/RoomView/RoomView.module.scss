@@ -1,0 +1,41 @@
+.container {
+    padding: 32px;
+}
+
+.roomContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    height: max-content;
+}
+
+.roomElement {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(165, 255, 187);
+    width: 300px;
+    height: 128px;
+    border-radius: 4px;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+        border: 1px solid rgb(71, 71, 183);
+    }
+}
+
+.btnJoin {
+    height: 32px;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.btnCreate {
+    height: 32px;
+
+    &:hover {
+        cursor: pointer;
+    }
+}

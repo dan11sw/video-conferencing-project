@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.container .inputContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.pickerContainer {
+  background-color: yellow;
+  position: absolute;
+  bottom: 32px;
+  right: 0;
+}

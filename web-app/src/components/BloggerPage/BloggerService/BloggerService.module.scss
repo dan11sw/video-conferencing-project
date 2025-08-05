@@ -1,0 +1,12 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    gap: 64px;
+}
+
+
+.listAccessServices {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}

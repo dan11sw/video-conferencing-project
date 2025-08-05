@@ -1,0 +1,177 @@
+@import '../../../styles/colors';
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+
+    width: 542px;
+    height: 610px;
+
+    background: rgba(255, 255, 255, 0.5);
+
+    box-shadow: 0px 1px 35px rgba(111, 151, 158, 0.17);
+    backdrop-filter: blur(16px);
+
+    border-radius: 16px;
+
+    @media only screen and (min-width: 320px) and (max-width: 480px) {
+        width: 300px;
+        height: 550px;
+    }
+
+    @media only screen and (min-width: 480px) and (max-width: 768px) {
+        width: 300px;
+        height: 550px;
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 992px) {
+        width: 300px;
+        height: 550px;
+    }
+}
+
+.headerImage {
+    img {
+        border-radius: 8px 8px 0px 0px;
+
+        @media only screen and (min-width: 320px) and (max-width: 480px) {
+            width: 300px;
+        }
+    
+        @media only screen and (min-width: 480px) and (max-width: 768px) {
+            width: 300px;
+        }
+    
+        @media only screen and (min-width: 768px) and (max-width: 992px) {
+            width: 300px;
+        }
+    }
+}
+
+.content {
+    height: 100%;
+    padding: 0 24px 0 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.title {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+
+    color: $black;
+
+    @media only screen and (min-width: 320px) and (max-width: 480px) {
+        font-size: 28px;
+        margin-bottom: -32px;
+    }
+
+    @media only screen and (min-width: 480px) and (max-width: 768px) {
+        font-size: 28px;
+        margin-bottom: -32px;
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 992px) {
+        font-size: 28px;
+        margin-bottom: -32px;
+    }
+}
+
+.description {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: $gray_light;
+    height: 52px;
+}
+
+.price {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    letter-spacing: -0.03em;
+    color: $black;
+
+    @media only screen and (min-width: 320px) and (max-width: 480px) {
+        font-size: 20px;
+    }
+
+    @media only screen and (min-width: 480px) and (max-width: 768px) {
+        font-size: 20px;
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 992px) {
+        font-size: 20px;
+    }
+}
+
+.priceBlock {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+}
+
+.moreBtn {
+    position: absolute;
+    right: -25px;
+    bottom: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 24px;
+    gap: 10px;
+
+    width: 190px;
+    height: 77px;
+
+    background: #A8D4DC;
+    box-shadow: 0px 1px 35px rgba(111, 151, 158, 0.17);
+    backdrop-filter: blur(16px);
+    border-radius: 16px 0px 16px 0px;
+    border-color: inherit;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+
+    color: $black;
+
+    border: none;
+
+    transition: all 0.5s;
+
+    &:hover {
+        cursor: pointer;
+        background-color: #5ed8ed;
+    }
+
+    @media only screen and (min-width: 320px) and (max-width: 480px) {
+        font-size: 20px;
+        width: 160px;
+    }
+
+    @media only screen and (min-width: 480px) and (max-width: 768px) {
+        font-size: 20px;
+        width: 160px;
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 992px) {
+        font-size: 20px;
+        width: 160px;
+    }
+}

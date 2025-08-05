@@ -1,0 +1,38 @@
+.container {
+  padding: 32px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 32px;
+}
+
+.requestList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.videoElement {
+  width: 712px;
+  height: -moz-max-content;
+  height: max-content;
+  padding: 0;
+  background-color: yellow;
+}
+
+.chatContainer {
+  height: -moz-max-content;
+  height: max-content;
+  width: 612px;
+  padding: 8px;
+  border: 1px solid rgb(128, 192, 185);
+}
+
+.chatDescription {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+}

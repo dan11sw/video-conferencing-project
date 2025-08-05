@@ -1,0 +1,68 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: start;
+  color: white;
+}
+
+.otherMessage {
+  padding: 12px;
+  margin-top: 8px;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: rgb(55, 133, 158);
+  min-height: 46px;
+  gap: 4px;
+  min-width: 100px;
+  max-width: 500px;
+  height: -moz-max-content;
+  height: max-content;
+  word-break: break-all;
+  border-radius: 5px;
+}
+
+.otherMessageHeader span {
+  color: rgb(216, 216, 115);
+}
+
+.message {
+  padding: 12px;
+  margin-top: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: rgb(73, 119, 226);
+  min-height: 46px;
+  min-width: 100px;
+  max-width: 500px;
+  height: -moz-max-content;
+  height: max-content;
+  align-self: flex-end;
+  word-break: break-all;
+  border-radius: 5px;
+}
+
+.date {
+  margin-left: 12px;
+  margin-top: 8px;
+  font-size: 12px;
+}
+
+.notify {
+  padding: 12px;
+  margin-top: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(43, 34, 113);
+  min-height: 46px;
+  width: 100%;
+  height: -moz-max-content;
+  height: max-content;
+  align-self: flex-end;
+  word-break: break-all;
+  border-radius: 5px;
+}

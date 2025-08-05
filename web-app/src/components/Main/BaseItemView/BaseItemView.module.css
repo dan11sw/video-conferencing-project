@@ -1,0 +1,370 @@
+.container {
+  position: relative;
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  z-index: 2;
+  margin-bottom: 256px;
+}
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.arrowLeft {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 36px 41px;
+  margin-bottom: 32px;
+  gap: 10px;
+  width: 96px;
+  height: 96px;
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0px 1px 35px rgba(111, 151, 158, 0.17);
+  -webkit-backdrop-filter: blur(16px);
+          backdrop-filter: blur(16px);
+  border-radius: 62px;
+  outline: none;
+  border: none;
+}
+.arrowLeft:hover {
+  cursor: pointer;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: row;
+  gap: 33px;
+}
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.title {
+  margin: 0;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 44px;
+  color: #040404;
+  width: 400px;
+}
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .title {
+    width: 200px;
+    font-size: 24px;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  .title {
+    width: 200px;
+    font-size: 24px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .title {
+    width: 200px;
+    font-size: 24px;
+  }
+}
+
+.tag {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 16px;
+  gap: 10px;
+  border: 1px solid #537980;
+  border-radius: 26px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #040404;
+}
+
+.form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px;
+  gap: 80px;
+  width: 544px;
+  height: 120px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 16px;
+}
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .form {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    width: 80%;
+    height: auto;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  .form {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    width: 80%;
+    height: auto;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .form {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    width: 80%;
+    height: auto;
+  }
+}
+
+.image {
+  border-radius: 16px;
+}
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .image {
+    width: 80%;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  .image {
+    width: 80%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .image {
+    width: 80%;
+  }
+}
+
+.price {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 39px;
+  letter-spacing: -0.03em;
+  color: #040404;
+}
+
+.subcontent {
+  margin: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.formBtn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 24px 40px;
+  gap: 10px;
+  width: 264px;
+  height: 72px;
+  background: #A8D4DC;
+  border-radius: 16px;
+  border: none;
+  outline: none;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #040404;
+  transition: all 0.5s;
+}
+.formBtn:hover {
+  cursor: pointer;
+  background-color: #5ed8ed;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 24px;
+  gap: 8px;
+  width: 543px;
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0px 1px 35px rgba(111, 151, 158, 0.17);
+  -webkit-backdrop-filter: blur(16px);
+          backdrop-filter: blur(16px);
+  border-radius: 16px;
+}
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .description {
+    width: 80%;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  .description {
+    width: 80%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .description {
+    width: 80%;
+  }
+}
+.description .descriptionHeader {
+  margin: 0;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 39px;
+  color: #040404;
+}
+.description .descriptionText {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 144%;
+  color: #040404;
+}
+.description li {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 144%;
+  color: #040404;
+}
+
+.format {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 24px;
+  gap: 8px;
+  width: 543px;
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0px 1px 35px rgba(111, 151, 158, 0.17);
+  -webkit-backdrop-filter: blur(16px);
+          backdrop-filter: blur(16px);
+  border-radius: 16px;
+}
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .format {
+    width: 80%;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  .format {
+    width: 80%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .format {
+    width: 80%;
+  }
+}
+.format .formatHeader {
+  margin: 0;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 39px;
+  color: #040404;
+}
+.format .formatText {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 144%;
+  color: #040404;
+}

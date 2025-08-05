@@ -1,0 +1,44 @@
+@charset "UTF-8";
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.controlContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.controlContainer .controlLabel {
+  font-family: "Futura PT";
+  font-style: normal;
+  font-weight: 450;
+  font-size: 18px;
+  line-height: 150%;
+  letter-spacing: 0.05em;
+  color: #8b8b8b;
+  /* Автоперенос слов */
+  word-wrap: break-word;
+}
+.controlContainer .controlInput {
+  display: flex;
+  padding-left: 4px !important;
+  padding-right: 4px !important;
+  align-items: center;
+  gap: 10px;
+  border-radius: 2px;
+  border: 1px solid #8B8B8B !important;
+  height: 48px;
+  width: auto !important;
+}
+.controlContainer .controlTextarea {
+  resize: none;
+  display: flex;
+  padding: 16px;
+  align-items: center;
+  gap: 10px;
+  border-radius: 2px;
+  border: 1px solid #8B8B8B;
+  height: auto;
+}

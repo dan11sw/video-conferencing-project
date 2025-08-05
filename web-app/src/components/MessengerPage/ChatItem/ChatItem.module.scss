@@ -1,0 +1,39 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 74px;
+    padding: 8px;
+    border-radius: 4px;
+    border: 2px solid transparent;
+
+    transition: all 0.5s ease-out;
+
+    &:hover {
+        cursor: pointer;
+        border: 2px solid rgb(82, 82, 239);
+        border-radius: 4px;
+        height: 74px;
+        background-color: rgb(161, 224, 234);
+    }
+
+    .item:nth-child(2) {
+        margin-left: 36px;
+        width: 200px;
+    }
+
+}
+
+.image {
+    width: 50px;
+    height: 50px;
+    border-radius: 46px;
+    object-fit: cover;
+}
+
+
+.item {
+    max-width: 200px;
+    height: 100%;
+}

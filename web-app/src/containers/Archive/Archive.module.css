@@ -1,0 +1,14 @@
+.imgItem {
+  display: flex;
+  flex-direction: row;
+}
+
+.payPanel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: rgb(50, 152, 215);
+}
+.payPanel p {
+  color: white;
+}

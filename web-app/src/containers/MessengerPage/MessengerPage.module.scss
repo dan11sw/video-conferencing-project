@@ -1,0 +1,34 @@
+.container {
+    padding: 32px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.search{
+    height: min-content;
+}
+
+.explore {
+    display: flex;
+    height: 600px;
+    width: 500px;
+    padding: 24px 6px;
+    flex-direction: column;
+    align-items: center;
+    gap: 27px;
+    border: 1px solid #000;
+} 
+
+.chat {
+    display: flex;
+    height: 600px;
+    width: 800px;
+    padding: 24px 6px;
+    flex-direction: column;
+    align-items: center;
+    gap: 27px;
+    border: 1px solid #000;
+    border-left: none;
+    overflow-y: visible;
+}

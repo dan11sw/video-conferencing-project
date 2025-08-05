@@ -1,0 +1,161 @@
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 80px;
+  position: relative;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 128px;
+}
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+  }
+}
+
+.containerLogo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  gap: 10px;
+  width: 124px;
+  height: 124px;
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+}
+
+.titleLogo {
+  font-family: "Proxima Soft";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 32px;
+  letter-spacing: -0.045em;
+  color: #040404;
+}
+
+.title {
+  margin-top: 0;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 94.52%;
+  text-transform: uppercase;
+  color: #040404;
+}
+
+.containerList {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.containerList p {
+  margin: 0;
+}
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .containerList {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  .containerList {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .containerList {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.link {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #040404;
+  z-index: 4;
+  transition: all 0.3s;
+}
+.link:hover {
+  cursor: pointer;
+  color: #3d8baf;
+}
+
+.iceFooter1,
+.iceFooter2,
+.iceFooter3 {
+  position: absolute;
+  bottom: -25px;
+}
+
+.iceFooter1 {
+  left: 0;
+  z-index: 3;
+}
+
+.iceFooter2 {
+  z-index: 2;
+}
+
+.iceFooter3 {
+  right: 0;
+  z-index: 1;
+}
+
+.sealFooter {
+  position: absolute;
+  bottom: 45px;
+  right: 8.59%;
+}
+
+.contact {
+  margin: 0;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #040404;
+}

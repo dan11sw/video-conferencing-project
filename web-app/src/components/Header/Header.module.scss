@@ -1,0 +1,65 @@
+@import "../../styles/devices";
+
+.header {
+    background-color: yellow;
+    display: flex;
+    position: relative;
+    margin-bottom: 200px;
+    height: 200px;
+
+    @media only screen and (min-width: $mobile_min_width) and (max-width: $tablet_max_width) {
+        margin-bottom: 50px;
+    }
+}
+
+.logo {
+    width: 15%;
+    min-width: 100px;
+    height: 100px;
+
+    margin: 2.5% 0 0 7.75%;
+}
+
+.iceImage {
+    position: absolute;
+    z-index: 1;
+
+    width: 624px;
+    height: 624px;
+
+    @media only screen and (min-width: $mobile_min_width) and (max-width: $tablet_max_width) {
+        width: 312px;
+        height: 312px;
+    }
+}
+
+.headerMenuBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18.25px;
+    border: 1px solid #537980;
+    border-radius: 27px;
+    width: 156px;
+    height: 40px;
+
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    top: 64px;
+    left: 0;
+    right: 0;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    p {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+        color: #040404;
+    }
+}
